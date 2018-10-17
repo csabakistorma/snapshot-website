@@ -1,0 +1,300 @@
+body h1, p, span {
+  font-family: 'Cabin', sans-serif;
+}
+
+
+
+/* ======== NAV =========== */
+.nav {
+  position: fixed;
+	width: 55px;
+	height: 100%;
+	float: left;
+  background-color: rgb(13,18,23);
+	text-align: center;
+	padding-top: 0.7rem;
+}
+
+.nav li {
+	padding: 1rem 0;
+}
+
+.nav a:link, a:visited {
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: rgb(134,137,139);
+}
+
+.nav a:hover {
+	color: white;
+}
+
+.active-nav-link {
+	color: rgb(25,181,254);
+}
+
+
+
+
+/* ============ BANNER ============== */
+.banner {
+  background: url("images/banner.jpg") no-repeat 70% center/cover;
+  width: calc(100vw - 55px);
+	float: right;
+	height: 75vh;
+  text-align: center;
+}
+
+.banner img {
+  height: 50%;
+}
+
+
+
+/* ========== SNAPSHOT ======== */
+.snapshot {
+	width: calc(100vw - 55px);
+  background-color: hsla(0, 100%, 3%, 0.61);
+  height: 75vh;
+  color: #fff;
+  font-family: 'Cabin', sans-serif;
+	display: table;
+}
+
+.snapshot-content {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.snapshot h1 {
+  font-size: 2.25rem;
+	margin: 1rem;
+}
+
+.snapshot p {
+  font-size: 1.125rem;
+  padding: 1rem 1.5rem 3rem 1.5rem;
+  font-family: 'Questrial', sans-serif;
+	line-height: 2rem;
+}
+
+.snapshot span {
+	text-transform: uppercase;
+}
+
+.snapshot a {
+  text-decoration: none;
+  color: #fff;
+  border: 0.5px solid grey;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.snapshot a:hover {
+  background-color: hsla(240, 5%, 22%, 0.3);
+}
+
+
+
+
+/* ============ GALLERY ============ */
+.gallery {
+	width: calc(100vw - 55px);
+	float: right;
+}
+
+.gallery h1 {
+	font-size: 1.5rem;
+	padding-left: 5%;
+	margin: 1rem 0;
+}
+
+
+@media (min-width: 568px) and (orientation: landscape) {
+	.img-container {
+		padding: 0 5%;
+	}
+}
+
+.gallery ul {
+	text-align: center;
+}
+
+.gallery li {
+	text-align: center;
+	display: block;
+	margin: auto;
+}
+
+/* Landscape módban egymás mellé helyezzük a képeket */
+@media (min-width: 568px) and (orientation: landscape) {
+	.gallery li {
+		display: inline;
+	}
+}
+
+.gallery img {
+  width: 90%;
+		margin: 0;
+	padding: 0;
+}
+
+/* Landscape módban a képek méretét kisebbre állítjuk, hogy 2 kép elférjen egymás mellett */
+@media (min-width: 568px) and (orientation: landscape) {
+	.gallery img {
+  	width: 49%;
+  }
+}
+
+.gallery p {
+	margin: 3rem 0;
+	text-align: center;
+}
+
+.gallery a {
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  font-size: 1.375rem;
+	font-family: 'Cabin', sans-serif;
+	text-decoration: none;
+	color: white;
+	background-color: rgb(25,181,254);
+}
+
+/* =========== ABOUT ============== */
+.about {
+	width: calc(100vw - 55px);
+	float: right;
+	background-color: rgb(230,230,230);
+}
+
+.about h1 {
+	font-size: 1.5rem;
+	padding-left: 5%;
+	margin: 1rem 0;
+}
+
+.about p {
+	padding: 1rem 5%;
+	line-height: 1.5rem;
+	font-family: 'Questrial', sans-serif;
+}
+
+
+
+
+/* =========== FOLLOW ME ===============*/
+.follow-me {
+	width: calc(100vw - 55px);
+	float: right;
+	background-color: rgb(230,230,230);
+}
+
+.follow-me h1 {
+	font-size: 1.5rem;
+	padding-left: 5%;
+	margin: 1rem 0;
+}
+
+.follow-me ul {
+	padding-left: 5%;
+}
+
+.follow-me li {
+	display: inline-block;
+	padding: 1rem 1rem 2rem 0;
+	font-size: 1.625rem;
+}
+
+.follow-me i {
+	color: rgb(25,181,254);
+}
+
+
+
+
+/* ============== MESSAGE FROM ===============*/
+.message-form {
+	width: calc(100vw - 55px);
+	float: right;
+	background-color: rgb(236,236,236);
+}
+
+.message-form form {
+	padding: 5%;
+}
+
+.message-form h1 {
+	font-size: 1.5rem;
+	padding-left: 5%;
+	margin: 1rem 0 0 0;
+}
+
+.message-form form p {
+	padding: 1rem 0;
+	font-family: 'Questrial', sans-serif;
+}
+
+::placeholder {
+	padding: 1rem 1rem;
+	color: lightgrey;
+}
+
+input[type = text], input[type = email] {
+	width: 100%;
+	height: 2.5rem;
+	border: none;
+	border: 1px solid rgba(25, 181, 254, 0.25);
+	border-radius: 4px;
+}
+
+textarea {
+	width: 100%;
+	resize: none;
+	height: 10rem;
+	border: none;
+	padding: 0;
+	border: solid 1px rgba(25, 181, 254, 0.25);
+	border-radius: 4px;
+}
+
+input[type = submit] {
+	width: 100%;
+	height: 2.5rem;
+	border: solid 1px rgba(25, 181, 254, 0.25);
+	padding: 0;
+	margin: 1rem 0;
+	background-color: #19B5FE;
+	color: white;
+	border-radius: 4px;
+}
+
+@media (min-width: 568px) and (orientation: landscape) {
+	input[type = submit] {
+		width: 30%;
+	}
+}
+
+
+/* =========== FOOTER ============== */
+footer {
+	width: calc(100vw - 55px);
+	float: right;
+	background-color: rgb(242,242,242);
+	text-align: center;
+}
+
+footer p {
+	padding: 2rem 1.5rem;
+	font-family: 'Questrial', sans-serif;
+	color: lightgrey;
+}
+
+.text-templated, .text-unsplash {
+	color: #19B5FE;
+}
+
+.text-templated {
+	text-transform: uppercase;
+}
