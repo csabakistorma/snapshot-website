@@ -3,7 +3,7 @@ body h1, p, span {
 }
 
 
-
+/* ================= INDEX PAGE ==================== */
 /* ======== NAV =========== */
 .nav {
   position: fixed;
@@ -36,7 +36,7 @@ body h1, p, span {
 
 
 
-/* ============ BANNER ============== */
+/* ============ INDEX BANNER ============== */
 .banner {
   background: url("images/banner.jpg") no-repeat 70% center/cover;
   width: calc(100vw - 55px);
@@ -51,7 +51,7 @@ body h1, p, span {
 
 
 
-/* ========== SNAPSHOT ======== */
+/* ========== INDEX SNAPSHOT ======== */
 .snapshot {
 	width: calc(100vw - 55px);
   background-color: hsla(0, 100%, 3%, 0.61);
@@ -98,7 +98,7 @@ body h1, p, span {
 
 
 
-/* ============ GALLERY ============ */
+/* ============ INDEX GALLERY ============ */
 .gallery {
 	width: calc(100vw - 55px);
 	float: right;
@@ -162,7 +162,9 @@ body h1, p, span {
 	background-color: rgb(25,181,254);
 }
 
-/* =========== ABOUT ============== */
+
+
+/* =========== INDEX ABOUT ============== */
 .about {
 	width: calc(100vw - 55px);
 	float: right;
@@ -184,7 +186,7 @@ body h1, p, span {
 
 
 
-/* =========== FOLLOW ME ===============*/
+/* =========== INDEX FOLLOW ME ===============*/
 .follow-me {
 	width: calc(100vw - 55px);
 	float: right;
@@ -214,7 +216,7 @@ body h1, p, span {
 
 
 
-/* ============== MESSAGE FROM ===============*/
+/* ============== INDEX MESSAGE FROM ===============*/
 .message-form {
 	width: calc(100vw - 55px);
 	float: right;
@@ -270,6 +272,7 @@ input[type = submit] {
 	border-radius: 4px;
 }
 
+/* Landscape módban a küldés gomb szélességét kisebbre állítjuk*/
 @media (min-width: 568px) and (orientation: landscape) {
 	input[type = submit] {
 		width: 30%;
@@ -298,3 +301,65 @@ footer p {
 .text-templated {
 	text-transform: uppercase;
 }
+
+
+
+
+
+/* =================== GENERIC PAGE ==================== */
+/* ============== GENERIC HEADER ================*/
+.generic-header {
+	width: calc(100vw - 55px);
+	float: right;
+	background-color: rgb(230,230,230);
+	text-align: center;
+	padding: 1.5rem 0;
+	font-family: 'Cabin', sans-serif;
+}
+
+.text-templated-black {
+	text-transform: uppercase;
+	color: black;
+}
+
+
+
+/* ================ GENERICCONTENT ============= */
+.generic-content {
+	width: calc(100vw - 55px);
+	float: right;
+	font-family: 'Questrial', sans-serif;
+	background-color: rgb(241,241,241);
+	line-height: 1.5rem;
+	padding-bottom: 1rem;
+}
+
+.generic, .senectus-magnis, .consequat-neque, .quam-accumsan {
+	padding: 0 5%;
+	margin: 3rem 0;
+}
+
+.generic h1, .senectus-magnis h1, .consequat-neque h1, .quam-accumsan h1{
+	font-size: 1.5rem;
+	padding-bottom: 1rem;
+}
+
+.consequat-neque img, .quam-accumsan img{
+	width: 85%;
+	display: block;
+	margin: auto;
+	margin-bottom: 1.5rem;
+	border: 1px solid lightgrey;
+	padding: 1rem;
+}
+
+/* A képet a szöveg mellé igazitjuk ballról */
+@media (min-width: 568px) and (orientation: landscape) {
+	.consequat-neque img, .quam-accumsan img{
+		width: 25%;
+		float: left;
+		margin: 0 1rem 0 0;
+	}
+}
+
+
