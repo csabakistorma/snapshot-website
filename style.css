@@ -307,8 +307,8 @@ footer p {
 
 
 /* =================== GENERIC PAGE ==================== */
-/* ============== GENERIC HEADER ================*/
-.generic-header {
+/* ============== GENERIC AND GALLERY HEADER ==============*/
+.header {
 	width: calc(100vw - 55px);
 	float: right;
 	background-color: rgb(230,230,230);
@@ -324,7 +324,7 @@ footer p {
 
 
 
-/* ================ GENERICCONTENT ============= */
+/* ================ GENERIC CONTENT ============= */
 .generic-content {
 	width: calc(100vw - 55px);
 	float: right;
@@ -363,3 +363,32 @@ footer p {
 }
 
 
+
+
+/* =================== GALLERY PAGE ==================== */
+/* ============== GALLERY NAVIGATION ==============*/
+.gallery-content {
+	width: calc(100vw - 55px);
+	float: right;
+}
+
+.gallery-nav ul {
+	padding: 5%;
+}
+
+.gallery-nav button {
+	width: 100%;
+	padding: 1rem 0;
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
+	margin-bottom: 0.5rem;
+	background-color: #19B5FE;
+	color: white;
+}
+
+.gallery-content h1 {
+	font-size: 1.5rem;
+	padding-left: 5%;
+	margin: 1rem 0;
+}
