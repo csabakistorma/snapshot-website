@@ -294,14 +294,13 @@ footer p {
 	color: lightgrey;
 }
 
-.text-templated, .text-unsplash {
-	color: #19B5FE;
-}
-
 .text-templated {
 	text-transform: uppercase;
 }
 
+footer a:visited {
+	color: #19B5FE;
+}
 
 
 
