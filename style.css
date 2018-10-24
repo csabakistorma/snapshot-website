@@ -2,6 +2,11 @@ body h1, p, span {
   font-family: 'Cabin', sans-serif;
 }
 
+.content {
+	width: calc(100vw - 55px);
+	float: right;
+}
+
 
 /* ================= INDEX PAGE ==================== */
 /* ======== NAV =========== */
@@ -39,10 +44,16 @@ body h1, p, span {
 /* ============ INDEX BANNER ============== */
 .banner {
   background: url("images/banner.jpg") no-repeat 70% center/cover;
-  width: calc(100vw - 55px);
-	float: right;
 	height: 75vh;
   text-align: center;
+}
+
+/* Tablet nézet*/
+/* A háttérkép rögzítve marad mikor görgetünk */
+@media (min-width: 768px) {
+	.banner {
+		background-attachment: fixed;
+	}
 }
 
 .banner img {
@@ -95,15 +106,25 @@ body h1, p, span {
   background-color: hsla(240, 5%, 22%, 0.3);
 }
 
+/* Tablet álló nézet */
+/* Megnövelt betűméret és padding igazítás */
+@media (min-width: 768px) {
+	.snapshot h1 {
+		font-size: 2.75rem;
+	}
+	
+	.snapshot p { 
+		font-size: 1.375rem;
+	}
+	
+	.snapshot a {
+		padding: 1rem 2.5rem
+	}
+}
 
 
 
 /* ============ INDEX GALLERY ============ */
-.gallery {
-	width: calc(100vw - 55px);
-	float: right;
-}
-
 .gallery h1 {
 	font-size: 1.5rem;
 	padding-left: 5%;
@@ -134,17 +155,38 @@ body h1, p, span {
 	}
 }
 
+/* Tableten és nagyobb kijelzőn 4 képet akarunk megjeleníteni egymás mellett */
+@media (min-width: 768px) {
+	.gallery li {
+		display: inline;
+	}
+}
+
 .gallery img {
   width: 90%;
-		margin: 0;
+	margin: 0;
 	padding: 0;
 }
 
-/* Landscape módban a képek méretét kisebbre állítjuk, hogy 2 kép elférjen egymás mellett */
+/* Mobil landscape módban a képek méretét kisebbre állítjuk, hogy 2 kép elférjen egymás mellett */
 @media (min-width: 568px) and (orientation: landscape) {
 	.gallery img {
   	width: 49%;
   }
+}
+
+/* Tablet és attól nagyobb kijelző esetén */
+@media (min-width: 768px) {
+	
+	/* Álló nézetben */
+	.gallery img {
+		width: 22%;
+	}
+	
+	.gallery h1 {
+		text-align: center;
+		padding-left: 0;
+	}
 }
 
 .gallery p {
@@ -164,33 +206,33 @@ body h1, p, span {
 
 
 
-/* =========== INDEX ABOUT ============== */
-.about {
-	width: calc(100vw - 55px);
-	float: right;
+
+/* =========== INDEX ABOUT - FOLLOW ============== */
+.about-follow {
 	background-color: rgb(230,230,230);
+}
+
+@media (min-width: 768px) {
+	/* A 2 divnek egymás mellett azonos magasságot állítunk be */
+	.info-and-message {
+		display: flex;
+	}
+	
+	.about-follow {
+		width: 50%;
+		float: left;
+	}
 }
 
 .about h1 {
 	font-size: 1.5rem;
-	padding-left: 5%;
-	margin: 1rem 0;
+	padding: 1rem 5%;
 }
 
 .about p {
 	padding: 1rem 5%;
 	line-height: 1.5rem;
 	font-family: 'Questrial', sans-serif;
-}
-
-
-
-
-/* =========== INDEX FOLLOW ME ===============*/
-.follow-me {
-	width: calc(100vw - 55px);
-	float: right;
-	background-color: rgb(230,230,230);
 }
 
 .follow-me h1 {
@@ -218,9 +260,14 @@ body h1, p, span {
 
 /* ============== INDEX MESSAGE FROM ===============*/
 .message-form {
-	width: calc(100vw - 55px);
-	float: right;
 	background-color: rgb(236,236,236);
+}
+
+@media (min-width: 768px) {
+	.message-form {
+		width: 50%;
+		float: right;
+	}
 }
 
 .message-form form {
@@ -229,8 +276,7 @@ body h1, p, span {
 
 .message-form h1 {
 	font-size: 1.5rem;
-	padding-left: 5%;
-	margin: 1rem 0 0 0;
+	padding: 1rem 5%;
 }
 
 .message-form form p {
@@ -282,10 +328,15 @@ input[type = submit] {
 
 /* =========== FOOTER ============== */
 footer {
-	width: calc(100vw - 55px);
-	float: right;
 	background-color: rgb(242,242,242);
 	text-align: center;
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	footer {
+		float: left;
+	}
 }
 
 footer p {
