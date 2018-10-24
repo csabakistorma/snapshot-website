@@ -189,6 +189,12 @@ body h1, p, span {
 	}
 }
 
+@media (min-width: 768px) and (orientation: landscape) {
+	.gallery img {
+		width: 24.5%;
+	}
+}
+
 .gallery p {
 	margin: 3rem 0;
 	text-align: center;
@@ -211,6 +217,10 @@ body h1, p, span {
 .about-follow {
 	background-color: rgb(230,230,230);
 }
+
+.info-and-message {
+		margin-top: 1rem;
+	}
 
 @media (min-width: 768px) {
 	/* A 2 divnek egymás mellett azonos magasságot állítunk be */
@@ -359,12 +369,17 @@ footer a:visited {
 /* =================== GENERIC PAGE ==================== */
 /* ============== GENERIC AND GALLERY HEADER ==============*/
 .header {
-	width: calc(100vw - 55px);
-	float: right;
 	background-color: rgb(230,230,230);
 	text-align: center;
 	padding: 1.5rem 0;
 	font-family: 'Cabin', sans-serif;
+}
+
+@media (min-width: 768px) {
+	.header {
+		text-align: right;
+		padding-right: 5%;
+	}
 }
 
 .text-templated-black {
@@ -417,13 +432,18 @@ footer a:visited {
 
 /* =================== GALLERY PAGE ==================== */
 /* ============== GALLERY NAVIGATION ==============*/
-.gallery-content {
-	width: calc(100vw - 55px);
-	float: right;
+.gallery-nav {
+	padding: 5%;
+	margin: 1rem 0;
 }
 
-.gallery-nav ul {
-	padding: 5%;
+.gallery-text {
+	float: left;
+}
+
+.gallery-text h1 {
+	font-size: 2rem;
+	padding: 1rem 0;
 }
 
 .gallery-nav button {
@@ -437,8 +457,36 @@ footer a:visited {
 	color: white;
 }
 
-.gallery-content h1 {
-	font-size: 1.5rem;
-	padding-left: 5%;
-	margin: 1rem 0;
+/* Tableten a gombokat egymás mellé rakjuk */
+@media (min-width: 768px) {
+	.gallery-nav {
+		width: 100%;
+		display: table;
+		padding: 0;
+	}
+	
+	.gallery-nav button {
+		width: 15%;
+		float: right;
+		margin: 0 0 0 1rem;
+	}
+
+	.gallery-nav ul > li{
+		display: inline;
+	}
+	
+	.gallery-text {
+		display: table-column;
+		float: left;
+		width: 20%;
+		margin-left: 5%;
+	}
+	
+	.gallery-links {
+		display: table-column;
+		float: right;
+		width: 60%;
+		margin-right: 5%;
+		padding: 0.5rem 0;
+	}
 }
