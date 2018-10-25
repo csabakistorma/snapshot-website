@@ -219,8 +219,8 @@ body h1, p, span {
 }
 
 .info-and-message {
-		margin-top: 1rem;
-	}
+	float: left;
+}
 
 @media (min-width: 768px) {
 	/* A 2 divnek egymás mellett azonos magasságot állítunk be */
@@ -231,6 +231,7 @@ body h1, p, span {
 	.about-follow {
 		width: 50%;
 		float: left;
+		padding: 0 2.5%;
 	}
 }
 
@@ -277,6 +278,7 @@ body h1, p, span {
 	.message-form {
 		width: 50%;
 		float: right;
+		padding: 0 2.5%;
 	}
 }
 
@@ -336,6 +338,7 @@ input[type = submit] {
 }
 
 
+
 /* =========== FOOTER ============== */
 footer {
 	background-color: rgb(242,242,242);
@@ -391,8 +394,6 @@ footer a:visited {
 
 /* ================ GENERIC CONTENT ============= */
 .generic-content {
-	width: calc(100vw - 55px);
-	float: right;
 	font-family: 'Questrial', sans-serif;
 	background-color: rgb(241,241,241);
 	line-height: 1.5rem;
@@ -401,10 +402,15 @@ footer a:visited {
 
 .generic, .senectus-magnis, .consequat-neque, .quam-accumsan {
 	padding: 0 5%;
-	margin: 3rem 0;
+	margin-bottom: 3rem;
 }
 
-.generic h1, .senectus-magnis h1, .consequat-neque h1, .quam-accumsan h1{
+.generic h1, .senectus-magnis h1 {
+	font-size: 2rem;
+	padding: 1rem 0;
+}
+
+.consequat-neque h1, .quam-accumsan h1{
 	font-size: 1.5rem;
 	padding-bottom: 1rem;
 }
@@ -424,6 +430,37 @@ footer a:visited {
 		width: 25%;
 		float: left;
 		margin: 0 1rem 0 0;
+	}
+}
+
+/* Flex-el egymáshoz igazítjuk a 2 divet */
+@media (min-width: 768px) {
+	.consequat-neque img, .quam-accumsan img{
+		margin: 0 1rem 0 0;
+	}
+	
+	.consequat-neque, .quam-accumsan {
+		display: flex;
+	}
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+	.consequat-neque, .quam-accumsan {
+		display: block;
+		width: 40%;
+		float: left;
+		background-color: rgb(241,241,241);
+		height: 20rem;
+		margin-bottom: 0;
+	}
+	
+	.quam-accumsan {
+		float: right;
+	}
+	
+	.consequat-neque img, .quam-accumsan img{
+		height: 130px;
+		width: 130px;
 	}
 }
 
@@ -455,6 +492,10 @@ footer a:visited {
 	margin-bottom: 0.5rem;
 	background-color: #19B5FE;
 	color: white;
+}
+
+.img-container {
+	padding-bottom: 1rem;
 }
 
 /* Tableten a gombokat egymás mellé rakjuk */
