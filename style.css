@@ -8,6 +8,7 @@ body h1, p, span {
 }
 
 
+
 /* ================= INDEX PAGE ==================== */
 /* ======== NAV =========== */
 .nav {
@@ -106,6 +107,7 @@ body h1, p, span {
   background-color: hsla(240, 5%, 22%, 0.3);
 }
 
+
 /* Tablet álló nézet */
 /* Megnövelt betűméret és padding igazítás */
 @media (min-width: 768px) {
@@ -131,13 +133,6 @@ body h1, p, span {
 	margin: 1rem 0;
 }
 
-
-@media (min-width: 568px) and (orientation: landscape) {
-	.img-container {
-		padding: 0 5%;
-	}
-}
-
 .gallery ul {
 	text-align: center;
 }
@@ -150,6 +145,10 @@ body h1, p, span {
 
 /* Landscape módban egymás mellé helyezzük a képeket */
 @media (min-width: 568px) and (orientation: landscape) {
+	.img-container {
+		padding: 0 5%;
+	}
+	
 	.gallery li {
 		display: inline;
 	}
@@ -189,9 +188,20 @@ body h1, p, span {
 	}
 }
 
+/* Fekvő nézetben */
 @media (min-width: 768px) and (orientation: landscape) {
 	.gallery img {
 		width: 24.5%;
+	}
+}
+
+/* Laptop vagy nagyobb kijelző esetén a képekhez animációt rendelünk*/
+@media (min-width: 1280px) {
+	.gallery img:hover {
+		transform: scale(1.2);
+		transition: .3s ease-in-out;
+		filter: sepia(60%);
+		box-shadow: 2px 2px black;
 	}
 }
 
@@ -210,6 +220,12 @@ body h1, p, span {
 	background-color: rgb(25,181,254);
 }
 
+@media (min-width: 1280px) {
+	.gallery a:hover {
+		background-color: rgb(1,155,227);
+		transition: all 300ms;
+	}
+}
 
 
 
@@ -266,6 +282,13 @@ body h1, p, span {
 	color: rgb(25,181,254);
 }
 
+
+@media (min-width: 1280px) {
+	.follow-me i:hover {
+		color: rgb(1,155,227);
+		transition: all 300ms;
+	}
+}
 
 
 
@@ -328,7 +351,16 @@ input[type = submit] {
 	background-color: #19B5FE;
 	color: white;
 	border-radius: 4px;
+	cursor: pointer;
 }
+
+@media (min-width: 1280px) {
+	input[type = submit]:hover {
+		background-color: rgb(1,155,227);
+		transition: all 300ms;
+	}
+}
+
 
 /* Landscape módban a küldés gomb szélességét kisebbre állítjuk*/
 @media (min-width: 568px) and (orientation: landscape) {
@@ -344,18 +376,19 @@ footer {
 	background-color: rgb(242,242,242);
 	text-align: center;
 	width: 100%;
-}
-
-@media (min-width: 768px) {
-	footer {
-		float: left;
-	}
+	float: left;
 }
 
 footer p {
 	padding: 2rem 1.5rem;
 	font-family: 'Questrial', sans-serif;
 	color: lightgrey;
+}
+
+@media (min-width: 1280px) {
+	footer a:hover {
+		text-decoration: none;
+	}
 }
 
 .text-templated {
@@ -529,5 +562,12 @@ footer a:visited {
 		width: 60%;
 		margin-right: 5%;
 		padding: 0.5rem 0;
+	}
+}
+
+@media (min-width: 1280px) {
+	.gallery-nav button:hover {
+		background-color: rgb(1,155,227);
+		transition: all 300ms;
 	}
 }
