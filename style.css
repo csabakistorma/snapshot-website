@@ -430,7 +430,7 @@ footer a:visited {
 	font-family: 'Questrial', sans-serif;
 	background-color: rgb(241,241,241);
 	line-height: 1.5rem;
-	padding-bottom: 1rem;
+	padding-bottom: 0.5rem;
 }
 
 .generic, .senectus-magnis, .consequat-neque, .quam-accumsan {
@@ -482,9 +482,9 @@ footer a:visited {
 		display: block;
 		width: 40%;
 		float: left;
-		background-color: rgb(241,241,241);
 		height: 20rem;
 		margin-bottom: 0;
+		margin-top: 2rem;
 	}
 	
 	.quam-accumsan {
