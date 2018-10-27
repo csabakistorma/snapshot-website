@@ -392,6 +392,11 @@ footer span {
 	color: #19B5FE;
 }
 
+footer a {
+	text-decoration: none;
+}
+
+
 @media (min-width: 1280px) {
 	footer a:hover {
 		text-decoration: none;
