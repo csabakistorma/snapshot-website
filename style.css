@@ -384,18 +384,18 @@ footer p {
 	color: lightgrey;
 }
 
-@media (min-width: 1280px) {
-	footer a:hover {
-		text-decoration: none;
-	}
-}
-
 .text-templated {
 	text-transform: uppercase;
 }
 
-footer a:visited {
+footer span {
 	color: #19B5FE;
+}
+
+@media (min-width: 1280px) {
+	footer a:hover {
+		text-decoration: none;
+	}
 }
 
 
