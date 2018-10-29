@@ -1,10 +1,10 @@
-body h1, p, span {
-  font-family: 'Cabin', sans-serif;
-}
-
 .content {
 	width: calc(100vw - 55px);
 	float: right;
+}
+
+body h1 {
+  font-family: 'Cabin', sans-serif;
 }
 
 
@@ -394,13 +394,6 @@ footer span {
 
 footer a {
 	text-decoration: none;
-}
-
-
-@media (min-width: 1280px) {
-	footer a:hover {
-		text-decoration: none;
-	}
 }
 
 
